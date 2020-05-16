@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import {HttpClientModule} from '@angular/common/http'
 import {AuthGuard} from './auth.guard';
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component'
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
