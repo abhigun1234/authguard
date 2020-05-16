@@ -1,0 +1,4 @@
+localStorage.setItem("local","localStorage")
+    sessionStorage.setItem("session","sessionStorage")
+    localStorage.getItem("local")
+    sessionStorage.getItem("session")
