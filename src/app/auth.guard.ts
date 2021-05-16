@@ -10,13 +10,13 @@ export class AuthGuard implements CanActivate {
 {}
 //can cative
   canActivate():boolean
-  { 
+  {  alert('canactive called')
       if(this._authService.logedIn())
-      { //alert('hello')
+      { alert('logged in')
         return true
       }
       else
-      { //alert('else')
+      { alert('else fail')
         this._router.navigate(['/login'])
         return false
       }

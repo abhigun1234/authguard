@@ -16,14 +16,25 @@ authobject
   public login()
   {
     
-    this.authService.authenticate(this.loginForm.value).subscribe(res=>{
-    //console.log(res.access_token)
-    this.authobject=res
-    console.log(this.authobject.access_token)
-   localStorage.setItem("token",this.authobject.access_token) 
-})
+//     this.authService.authenticate.subscribe(res=>{
+
+//      console.log(res)
+//     this.authobject=res
+//     console.log(this.authobject.access_token)
+//    localStorage.setItem("token",this.authobject.access_token) 
+// })
    
-    
-   
+  //  this.authService.authenticate(this.loginForm.value).subscribe(res=>{
+  //           console.log(res)
+  //           this.authobject=res
+  //           console.log(this.authobject.access_token)
+  //         localStorage.setItem("token",this.authobject.access_token) 
+  //  }) 
+        let  token =this.authService.authenticate(this.loginForm.value)
+        this.authService.tokenSubject.subscribe(res=>{
+          console.log(res)
+          localStorage.setItem("token",res)
+        })
+        
   }
 }
