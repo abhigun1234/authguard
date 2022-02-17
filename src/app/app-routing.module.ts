@@ -10,6 +10,7 @@ const routes: Routes = [
 },
 {path:'about',component:AboutComponent}
 ,
+{path:'login',component:LoginComponent},
  {path:'home',component:HomeComponent,canActivate:[AuthGuard]}
 
 ];
